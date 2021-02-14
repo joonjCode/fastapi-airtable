@@ -1,0 +1,15 @@
+{%extends "base.html"%} 
+
+{% block content %} 
+<h1>Hello fastapi - airtable</h1>
+
+{% if submitted_email and did_send %}
+	<p>Thank you for joining with {{submitted_email}}</p>
+{%endif %}
+
+<form action="" method="POST">
+	<input type="email" name="email" placeholder="Your email..." required/>
+	<input type="submit" value="Join waitlist"/>
+</form>
+
+{% endblock %}
